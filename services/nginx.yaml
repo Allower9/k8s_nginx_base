@@ -1,0 +1,14 @@
+# services/nginx.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: my-app  # Тот же namespace
+spec:
+  type: LoadBalancer  # Для доступа извне
+  selector:
+    app: nginx  # Должен совпадать с label из Deployment
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
