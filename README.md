@@ -1,6 +1,6 @@
 # создание просто nginx через k8s
 до работы с k8s нужно установить  ... и настроить ...
-1) создал NS `kubectl create namespace my-app`
+### 1) создал NS `kubectl create namespace my-app`
 2) пишем код для pod и сервис
 3) запускаем `kubectl apply -f deployments/ -f services/`
 4) kubectl get pods -n my-app -w - проверяем что все норм с контейнерами
