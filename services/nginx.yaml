@@ -3,11 +3,11 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-service
-  namespace: my-app  # Тот же namespace
+  namespace: my-app
 spec:
-  type: LoadBalancer  # Для доступа извне
+  type: LoadBalancer 
   selector:
-    app: nginx  # Должен совпадать с label из Deployment
+    app: nginx  
   ports:
     - protocol: TCP
       port: 80
